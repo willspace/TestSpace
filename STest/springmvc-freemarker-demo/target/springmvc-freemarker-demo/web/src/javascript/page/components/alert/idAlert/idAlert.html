@@ -1,0 +1,16 @@
+{#if alertShow == true}
+<div class="m-mask">
+    <div class="m-identify">
+        <div class="idf-tlt">
+            <h4>实名信息确认</h4>
+            <i on-click={this.onClose($event)}></i>
+        </div>
+        <div class="idf-bd">
+            <p>身份证号码：<strong>{idNum}</strong></p>
+            <p>姓名：<strong>{name}</strong></p>
+            <p>实名信息认证成功后无法修改</p>
+            <span class="b-btn b-white" on-click={this.onClose($event)}>返回重填</span><span on-click={this.onSubmit($event)} class="b-btn b-blue">确认提交</span>
+        </div>
+    </div>
+</div>
+{/if}

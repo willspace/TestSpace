@@ -1,0 +1,31 @@
+<div class="u-input">
+    <label  class="u-label">&nbsp;</label>
+    <input ref=input type="text" placeholder="请输入手机校验码" class="i-inpt smsize {boderclazz}" r-model={value} on-blur={this.onBlur($event)} on-focus={this.onFocus($event)} />
+    <div on-click={this.onClear($event)} {#if value!=''}class="u-tip"{#else}class="u-tip f-dn"{/if}><div class="spritebg u-clear"></div></div>
+    {#if !smslock}
+        <span on-click={this.getSms($event)} class="b-btn btn-getsms">获取手机校验码</span>
+    {#else}
+        <span class="btn-getsms-loading">重新发送（{clockTime}s）</span>
+    {/if}
+    {#if state=='1'}
+        <span class="popb succ"><i></i></span>
+    {#elseif state=='2'}
+        <table class="popb err" r-animation='on: enter; class: animated shake;' >
+            <tbody>
+                <tr>
+                    <td class="b-i"><i></i></td>
+                    <td class="b-p">{errcontent}</td>
+                </tr>
+            </tbody>
+        </table>
+    {#elseif state == '3'}
+    <table class="popb err"  r-animation='on: enter; class: animated shake;' >
+        <tbody>
+            <tr>
+                <td class="b-i"><i></i></td>
+                <td class="b-p">请编辑短信<strong>{smsTxt}</strong><br/>发送到<strong>{phoneNum}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    {/if}
+</div>

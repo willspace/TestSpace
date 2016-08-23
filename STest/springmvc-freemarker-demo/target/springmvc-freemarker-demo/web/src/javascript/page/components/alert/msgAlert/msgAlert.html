@@ -1,0 +1,15 @@
+{#if alertShow == true}
+<div class="m-mask">
+    <div class="m-pop">
+        <div class="pop-tlt">
+            <h4>{#if !!title}{title}{#else}&nbsp;{/if}</h4>
+            <i on-click={this.onClose($event)}></i>
+        </div>
+        {#if page == 'mob-p'}
+        <div class="pop-bd">
+            <img class="i-mob-p" src="/web/src/res/images/mob-p.png" alt="扫描申诉"/>
+        </div>
+        {/if}
+    </div>
+</div>
+{/if}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="application-name" content="reg.163.com"/>
+  <meta name="keywords" content="网易安全中心"/>
+  <meta name="description" content="网易安全中心"/>
+  <title>网易安全中心</title>
+  <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+<!-- 顶部toast提示 -->
+  <div id="toast-block" class="m-toast">
+      <span class="txt">该帐号换号操作过于频繁，请下月再试</span>
+  </div>
+<!-- END 顶部toast提示 -->
+
+<!-- 公共头部 -->
+  <div class="g-hd">
+  	<div class="g-in">
+    	<div class="m-logo "></div>
+      <div class="m-tr-block"><span><i></i>15088719859</span><a target="_blank" href="">帮助中心</a><a target="_blank" href="">退出</a></div>
+    </div>
+  </div>
+<!-- END 公共头部 -->
+
+<!-- 中间主体 -->
+  <div class="g-bd">
+    <!-- 大标题 -->
+    <div class="top_tlt">更换手机</div>
+    <!-- END 大标题 -->
+
+    <!-- 步骤导航 -->
+    <div class="b-step">
+      <span class="i-step light"><p>验证原帐号</p></span>
+      <span class="i-line"></span>
+      <span class="i-step"><p>验证新帐号</p></span>
+      <span class="i-line"></span>
+      <span class="i-step"><p>更换成功</p></span>
+    </div>
+    <!-- END 步骤导航 -->
+
+    <!-- 操作主体 -->
+    <div class="m-opr">
+
+      <!-- 次标题、居中信息 -->
+      <!-- END 次标题、居中信息 -->
+
+      <!-- form表单 -->
+      <form id="bind-phone-form" class="clearfix">
+        <div class="sub_tlt  sub_tlt_2">
+          你正在验证原帐号：150xxxx9859
+        </div>
+        <!-- 密保卡 -->
+        <!-- END 密保卡 -->
+
+        <!-- 输入框上tip -->
+        <!-- END 输入框上tip -->
+
+        <div class="u-input">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_6"  type="text" placeholder="请输入验证码" class="i-inpt smsize" value="PFXa" disabled />
+          <div class="u-tip f-dn"><div class="u-clear"></div></div>
+          <div id="btn-vcode" class="i-vcode"><img src="../../res/images/vcode.png" /></div>
+        </div>
+
+        <div class="u-input">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_7"  type="text" placeholder="请输入验证码" class="i-inpt smsize" />
+          <div class="u-tip"><div class=" u-clear"></div></div>
+          <span class="b-btn btn-getsms f-dn">获取验证码</span>
+          <span class="b-btn btn-getsms-loading">重新发送（30s）</span>
+          <table class="popb err"  r-animation='on: enter; class: animated shake;' >
+            <tbody><tr><td class="b-i"><i></i></td><td class="b-p">请编辑短信<strong>移动帐号更换</strong><br/>发送到<strong>1069&nbsp;8163&nbsp;0163&nbsp;331</strong></td></tr></tbody>
+          </table>
+        </div>
+
+        <!-- 输入组件 -->
+        <div class="u-input">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_1" type="text" placeholder="请输入新手机号码" class="i-inpt" autocomplete="off" />
+          <div class="u-tip f-dn"><div class=" u-clear"></div></div>
+          <span class="popb succ f-dn"><i></i></span>
+          <table class="popb err f-dn"  r-animation='on: enter; class: animated shake;' >
+            <tbody><tr><td class="b-i"><i></i></td><td class="b-p">请输入正确的验证码</td></tr></tbody>
+          </table>
+        </div>
+        <!-- END 输入组件 -->
+
+        <!-- 输入组件 选中 -->
+        <div class="u-input">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_2" type="text" placeholder="请输入新手机号码" class="i-inpt act-clazz" autocomplete="off" value="uestest@163.com" />
+          <div class="u-tip"><div class=" u-clear"></div></div>
+          <span class="popb succ"><i></i></span>
+        </div>
+        <!-- END 输入组件 选中 -->
+
+        <!-- 输入组件，密码等级 -->
+        <div class="u-input ">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_3"  type="password" placeholder="请输入密码" class="i-inpt" value="123456" />
+          <div class="u-tip"><div class="u-clear"></div></div>
+          <span class="popb pwd lv2"><i class="lv-i lv-i1 lv-i2 lv-i3"></i><i class="lv-i lv-i2 lv-i3"></i><i class="lv-i lv-i3"></i><p class="lv-p1">弱</p><p class="lv-p2">中</p><p class="lv-p3">强</p></span>
+        </div>
+        <!-- END 输入组件，密码等级  -->
+
+        <!-- 输入组件 错误 -->
+        <div class="u-input">
+          <label  class="u-label">&nbsp;</label>
+          <input id="input_4"  type="password" placeholder="请输入密码" class="i-inpt err-clazz" value="123456" />
+          <div class="u-tip"><div class="u-clear"></div></div>
+          <table class="popb err"  r-animation='on: enter; class: animated shake;' >
+            <tbody><tr><td class="b-i"><i></i></td><td class="b-p">请输入正确的密码</td></tr></tbody>
+          </table>
+        </div>
+        <!-- END 输入组件 错误 -->
+
+        <!-- 输入提示框 -->
+        <div class="u-input">
+          <label class="u-label">&nbsp;</label>
+          <input id="input_sg" type="text" placeholder="请输入邮箱" class="i-inpt"/>
+          <div id="sg_box" class="m-sug"></div>
+          <div class="u-tip"><div class=" u-clear"></div></div>
+        </div>
+        <!-- END输入提示框 -->
+        
+        <!-- 密码框 可见-->
+        <div class="u-input">
+          <label class="u-label">&nbsp;</label>
+          <input id="input_pw" type="password" placeholder="请输入新密码" class="i-inpt"/>
+          <div class="u-tip"><div id="eye" class="u-eye" data-eye="false"></div></div> 
+        </div>
+        <!-- END 密码框 -->
+
+        <!-- 密码等级框 -->
+        <div class="ps-lv">         
+          <div class="popb pwd lv1">          
+            <i class="lv-i lv-i1 lv-i2 lv-i3"></i><i class="lv-i lv-i2 lv-i3"></i><i class="lv-i lv-i3"></i><p class="lv-p1">弱<span>试试字母、数字、符号混搭</span></p><p class="lv-p2">中</p><p class="lv-p3">强</p>
+          </div>
+        </div>
+        <!-- END 密码等级框 -->
+
+        <!-- 按钮  -->
+        <div class="u-input">
+            <label  class="u-label">&nbsp;</label>
+        	<span class="b-btn btn-blue">下一步</span>
+            <div class="b-loading f-dn"><img src="../../res/images/loading.gif" /></div>
+        </div>
+        <!-- END 按钮  -->
+
+        <div class="u-input u-sub-a">
+          <label  class="u-label">&nbsp;</label>
+          <a href="#" class="">手机不在我手上，我要换号</a>
+        </div>
+      </form>
+    
+          <!-- btn下提示字块 -->
+          <div class="u-tips">
+            <span class="tip">激活后，你可以用该邮箱来处理更换手机和解除帐号冻结问题。</span>
+          </div>
+          <!-- END btn下提示字块 -->
+
+        <!-- 安全渠道块 -->
+        <div class="b-channel">
+          <div class="tlt">该手机已无法使用？你还可以通过以下方式进行验证</div>
+          <a class="i-channel safe-email"><i>&nbsp;</i><p class="tlt">通过密保邮箱</p><p>发送邮件到***123@163.com</p></a>
+          <a class="i-channel appeal"><i>&nbsp;</i><p class="tlt">通过客服申诉</p><p>需要你提供多种注册资料</p></a>
+          <a class="i-channel pwd f-dn"><i>&nbsp;</i><p class="tlt">通过密码</p><p>需要你输入密码解冻</p></a>
+          <a class="i-channel chg-mobile f-dn"><i>&nbsp;</i><p class="tlt">更换手机</p><p>找回该帐号下所有数据到新手机</p></a>
+          <a class="i-channel mobile "><i>&nbsp;</i><p class="tlt">通过手机验证</p><p>我们会给你手机发送验证码</p></a>
+        </div>
+        <!-- END 安全渠道块 -->
+
+      <!-- 换号成功 -->
+      <div class="m-succ">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>换号申请已提交</h3>
+          <p>24小时后，本手机帐号将转移到新手机号内。</p>
+          <p>你可以通过发送短信<strong>qx</strong>到<strong>1069 &nbsp;8163 &nbsp;0163 &nbsp;331</strong>取消本次换号操作或回复
+          <strong>ljsx</strong>立即生效</p>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div>      
+      <!-- END 换号成功 -->
+      
+      <!-- 解冻成功 -->
+      <div class="m-succ">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>手机帐号：18668185608</h3>
+          <h3>冻结已解除！</h3>
+          <h3 class="n-tip">下次请用15021701633登录</h3>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div>  
+      <!-- END 解冻成功 -->
+
+      <!-- 操作失败 -->
+      <div class="m-error">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>操作失败</h3>          
+          <p>该情况可能是由于链接已超过24小时</p>
+          <p>也可能是由于已使用或已解除冻结</p>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div> 
+      <!-- END操作失败 -->
+      
+      <!-- 安全提示 -->
+      <div class="m-warn">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>安全提示</h3>          
+          <p>该操作会清空你的身份证信息、邮箱信息以及所有产品数据，</p>
+          <p>确认继续注册新帐号么？</p>
+        </div>
+        <div class="u-bak">
+          <div class="b-btn b-btn-w">返回</div>
+          <div class="b-btn b-btn-w">注册新帐号</div>
+        </div>
+      </div>
+      <!-- END 安全提示 -->
+
+      <!-- 锁定成功 -->
+      <div class="m-succ">
+        <div class="i-img"></div>        
+          <div class="n-lock">
+            <span class="c-tlt">当前帐号状态：锁定</span>
+            <span>6天23时59分</span>          
+            <a href="#">立即解锁</a>
+            <p>每次锁定时间为7天，超过锁定时间后帐号将自动解锁</p>
+          </div>        
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div> 
+      <!-- END 锁定成功 -->
+  
+      <!-- 实名信息提交成功 -->
+      <div class="m-info">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>帐号15858065333</h3>
+          <h3>实名信息已提交</h3>
+          <div class="n-tip2">
+            <p>一旦验证成功，点击"实名信息"</p>
+            <p>我们将会返回给你关于个人实名认证的相关结果</p>
+          </div>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div>        
+      <!-- END 实名信息提交成功 -->
+
+      <!-- 人工审核 -->
+      <div class="m-people">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>人工审核中</h3>
+          <h3>可能还需一段时间，请耐心等候</h3>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div>  
+      <!-- END 人工审核 -->
+      
+      <!-- 实名认证中 -->
+      <div class="m-process">
+        <div class="i-img"></div>
+        <div class="note">
+          <h3>实名认证中</h3>
+          <h3>可能还需一段时间，请耐心等候</h3>
+        </div>
+        <div class="u-bak"><div class="b-btn b-btn-s">返回安全中心</div></div>
+      </div>  
+      <!-- END 实名认证中 -->
+  
+      <!-- btn下提示字块 -->
+      <div class="u-tips f-dn">
+        <span class="tip">没有收到邮件？点击<a href="#">重新发送</a></span>
+      </div>
+      <!-- END btn下提示字块 -->
+
+    </div>
+    <!-- END 操作主体 -->
+
+    <!-- 实名确认弹窗 -->
+    <div class="m-mask f-dn">
+      <div class="m-identify">
+        <div class="idf-tlt">
+          <h4>实名信息确认</h4>
+          <i></i>
+        </div>
+        <div class="idf-bd">
+          <p>身份证号码：<strong>342428199009045138</strong></p>
+          <p>姓名：<strong>张小白</strong></p>
+          <p>实名信息认证成功后无法修改</p>
+          <span class="b-btn b-white">返回重填</span><span class="b-btn b-blue">确认提交</span>
+        </div>
+      </div>
+    </div>
+    <!-- END 实名确认弹窗 -->
+    
+    <!-- 遮罩弹窗 -->
+    <div class="m-mask f-dn">
+      <div class="m-pop">
+        <div class="pop-tlt">
+          <h4>帐号冻结</h4>
+          <i></i>
+        </div>
+        <div class="pop-bd">
+          <div class="pop-content">
+            <i></i>
+            <p>该帐号由于长期不登录目前处于冻结期，请你先提交申诉，解冻后我们为你更换手机</p>
+          </div>
+          <div class="pop-btn">
+            <span class="b-btn b-blue">提交申诉</span><span class="b-btn b-white">取消</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END 遮罩弹窗 -->
+
+    <!-- 二维码 遮罩弹窗 -->
+    <div class="m-mask f-dn">
+      <div class="m-pop">
+        <div class="pop-tlt">
+          <h4>扫描申诉</h4>
+          <i></i>
+        </div>
+        <div class="pop-bd">
+          <img class="i-mob-p" src="../../res/images/mob-p.png" alt="扫描申诉"/>
+        </div>
+      </div>
+    </div>
+    <!-- END  二维码 遮罩弹窗 -->
+
+
+    <!-- 验证不了 -->
+    <div class="bottom-tlt">验证不了？</div>
+    <!-- END验证不了 -->
+  </div>
+<!-- END 中间主体 -->
+
+<!-- 公共底部 -->
+  <div class="g-ft">
+    <div class="g-in">
+      <div class="m-cp">
+        <p><a href="http://corp.163.com/eng/about/overview.html" target="_blank">About NetEase</a>-<a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a>-<a href="http://gb.corp.163.com/gb/contactus.html" target="_blank">联系方式</a>-<a href="http://reg.163.com/help/help_oauth2.html?v=20141215" target="_blank">OAuth2.0认证</a>-<a href="http://corp.163.com/gb/job/job.html" target="_blank">招聘信息</a>-<a href="http://help.163.com/" target="_blank">客户服务</a>-<a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a>-<a href="http://emarketing.biz.163.com/" target="_blank">网络营销</a></p>
+        <p>网易公司版权所有 ©1997-2016</p>
+      </div>
+    </div>
+  </div>
+<!-- END 公共底部 -->
+
+
+</body>
+</html>

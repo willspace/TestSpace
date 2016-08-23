@@ -1,0 +1,50 @@
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;outline:none;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:normal;}
+del,ins,u,s,a,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 "Microsoft YaHei","微软雅黑","宋体",helvetica,"Hiragino Sans GB";color:#666;outline:0;}
+body{cursor:default;}
+input::-ms-clear,input::-ms-reveal{display:none;}
+a{color:#666;}
+button{border:0;}
+html,body{width:100%;height:auto;margin:0;padding:0;background:none;font-family:"Microsoft YaHei","微软雅黑";}
+input{width:225px;height:30px;padding-left:0;color:#4c4c4c;border:none;font-size:16px;line-height:30px;*border:0;}
+input:focus{border:none;outline:none;*border:0;*outline:0;}
+a,a:active,a:hover,a:visited{text-decoration:none;}
+.clearboth{clear:both;}
+.f-cb{zoom:1;}
+.f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+input::-webkit-input-placeholder{font-weight:normal;color:#bdbdbd;}
+input::-moz-placeholder{font-weight:normal;color:#bdbdbd;}
+input.i-inpt:-ms-input-placeholder{font-weight:normal;color:#bdbdbd;}
+input:-moz-placeholder{font-weight:normal;color:#bdbdbd;}
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{-webkit-box-shadow:0 0 0 999px #fff inset;}
+input::-ms-clear{display:none;}
+input::-ms-reveal{display:none;}
+@-webkit-keyframes showAnimation{0%{opacity:0;-webkit-transform:scale3d(0.1,0.1,0.1);transform:scale3d(0.1,0.1,0.1);}
+80%{opacity:1;-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05);}
+}
+.m-cover{position:fixed;left:0px;width:100%;height:100%;overflow:hidden;opacity:0.6;z-index:1000;top:0px;background:-webkit-radial-gradient(50% 50%,rgba(0,0,0,0.298039),#000 75%);}
+.f-bgcolor{background-color:#2d85be;}
+.btncolor{background:#2d85be;color:#fff;}
+.btncolor:hover{background:#3f96cf;color:#fff;}
+.btncolor:active{background:#2475ab;color:#fff;}
+.m-header2{padding:30px 0 10px;}
+.m-header2 .j-headimg .u-head1,.m-header2 .j-headimg .u-head2{display:none;}
+.m-header2 .j-headimg .line{top:0;position:relative;border-right:none;width:250px;margin:0 auto;height:60px;display:block;background:url("../res/images/sprite1.png") no-repeat;background-size:750px;}
+.cnt-box-include .u-closebtn{display:block;}
+.m-container .u-tab{padding:0 0 10px 0;}
+.m-footer{padding:0 0 20px;}

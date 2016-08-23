@@ -1,0 +1,206 @@
+@abstract '_config.mcss';
+/* 表单 */
+.m-opr{
+    $clearfix();
+    margin-top:23px;
+    .sub_tlt{
+        display: block; text-align: center; margin: 0 0 22px 0; font-size: 14px; color: $fc_gray;padding-top:16px;
+        strong{color:$fc_black;}
+        a{color:$fc_blue;}
+        a:hover{color:$fc_blue_t;}
+        p{text-align:center;}
+    }
+    .sub_tlt_2{
+        width: 330px;
+        margin: 0 auto 9px;
+        text-align: left;
+        color:$fc_black;
+        strong{color:$fc_blue;}
+    }
+    .sub_tlt_3{
+        text-align: left;width: 331px;color: $fc0;margin: 0 auto 12px;
+    }
+    .u-input, .u-qselect{
+        $clearfix();position: relative;clear:both; height:58px; width:100%; overflow: visible;
+        .country{position: absolute;
+            left: 334px;
+            top: 9px;
+            height: 38px;
+            line-height: 38px;
+            width: 30px;
+            padding: 0 10px;
+            z-index:999;
+            background-color:#fff;
+        }
+    }
+    .u-sub-a{
+        a{
+            display: block;
+            margin-top: 3px;
+            color:$fc_gray;
+            text-decoration: underline;
+
+        }
+        a:hover{
+             color:$fc_black;
+        }
+    }
+    .u-btn{
+        margin-top:14px;
+    }
+    .u-qselect{
+        height:26px;
+        margin:32px 0 4px;
+        .arrow{
+            background: url("../res/images/sprite.png") -512px -110px no-repeat;width: 30px;height: 26px;top: 0;position: absolute;right: 0;
+        }
+        .qselectbox, .qselectsug{
+            width: 330px;
+            border: solid 1px #e5e5e5;
+            font-size: 14px;
+            line-height: normal;
+            color: #333;
+            text-indent: 0.5em;
+            position:relative;
+        }
+        .qselectbox{height: 26px;float: left;}
+        .qselectsug{
+            position: absolute;
+            top: 27px;
+            left: 333px;
+            z-index: 9999;
+            background: #fff;
+        }
+        .qselectbox p, .qselectsug a{line-height:26px;display:block;}
+        .qselectsug a:hover{
+            background:$fc_selecthover;
+        }
+    }
+    .u-input.sug{overflow:visible;z-index:1001;}
+    .u-input.firstelem{overflow:visible;z-index: 12; }
+    .u-input.m-card{
+        height: 73px; text-align: center;
+        .popb{position: absolute;right: 40px;top: 0;}
+    }
+    .u-input-select{
+        overflow:visible;
+        .u-label{height:32px;padding:0;margin:0;}
+        height:32px;
+        margin-top:8px;
+    }
+    .u-iptchange{margin-left:334px;float:left;height:22px;color:$fc_blue;cursor:pointer;}
+    .u-tlc{text-align:center;}
+    .u-label{ float:left; width:333px; text-align: right; margin-top: 8px; font-size:16px; line-height:45px; color:#333;}
+    .i-inpt{ float: left; height:40px; width:330px; margin-top: 8px;border:solid 1px $bd-item; font-size:14px;line-height:36px; color: $fc_black;  text-indent:.5em; }
+    .js-placeholder-parent{float: left;}
+    .js-placeholder{color:$fc_placeholder;height:40px;font-size:14px; text-indent:.5em; line-height:40px;margin-top:8px;}
+    .u-tip{ position:relative;float:left; width:38px; height:38px;margin-left:-42px; margin-top:9px;z-index:11; background:#fff ;}
+    .u-clear{ position: absolute; width:20px;height:20px; left:10px; top:10px;cursor:pointer;$spritebg();background-position:-72px -44px;opacity:.7;}
+    .u-clear:hover{opacity:1;}
+    .u-clear1{ position: absolute; width:20px;height:20px; left:10px; top:10px;cursor:pointer;$spritebg();background-position:-99px -44px;opacity:.7;}
+    .u-clear1:hover{opacity:1;}
+    .u-tip .u-eye{ position:absolute; width:24px; height:13px; left:10px; top:10px; cursor:pointer; $spritebg();background-position:-42px -46px;-webkit-user-select:none;user-select:none;}
+    .u-tip .z-act{background-position:-10px -46px;}
+    
+    .i-inpt.smsize{width:190px;}
+    .i-inpt:disabled{background: #fff; color:$fc_gray;}
+    /* 输入框错误状态 */
+    .err-clazz{border-color:$bd_err !important;}
+    /* 输入框输入状态 */
+    .act-clazz{border-color:$bd-select !important; box-shadow: 1px 1px 1px 1px #d8ecf9, -1px -1px 1px 1px #d8ecf9; }
+    .i-card{$inline-block();
+        width:32px;border:solid 1px $bd-item;margin: 0 18px; color:$fc_gray; background: #ccc;
+        .coord{display: block; height: 29px;width:32px;font-size: 14px; color: #fff; line-height: 29px;text-align: center;}
+        .coord.clr1{background: #a3c66c;}
+        .coord.clr2{background: #c64e41;}
+        .coord.clr3{background: #467ec3;}
+        .c-ipt{ display: block;width: 100%;height: 32px;font-size: 14px;color: $fc_black; line-height: 29px; text-align: center;}
+    }
+
+    /* 下拉框 */
+    .m-sug{
+        position:absolute;z-index: 990;top: 49px;left: 333px;*left:0;width:330px;
+        overflow:hidden;border:solid 1px #ccc;background-color:#f5f5f5;font-size:14px;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            /* IE10-specific styles go here */
+            left: 340px;
+        }
+        .js-selected{background-color:#c4dcec;color:#fff;}
+    }
+    .w-ipt{width:260px;outline:none}
+    .m-sug{
+        .itm{height: 30px;line-height: 30px;cursor:pointer;padding-left: 6px;text-indent:0.5em;}
+    }
+
+    /* 输入框状态提示 */
+    .popb{
+        float:left;margin-left:10px; width:290px; height:58px; max-height:60px; overflow: hidden; font-size: 12px;
+        .b-i{height: 58px;width:21px;}
+        i{$spritebg(); float:left; width:18px; height:20px;padding:0 5px 0 0;  background-position:1000px 1000px;}
+        .b-p{ overflow: hidden; line-height:20px;word-break: break-all;text-align:left;}
+        strong{color: $fc_blue;padding: 0 3px;}
+    }
+    /* 暂无输入正确提示 */
+    /*.popb.succ{color:#71c86f;}
+    .popb.succ i{ margin-top: 22px; background-position:-388px -119px;}*/
+    .popb.err{ color:$fc_err; $animation(shake,1s);}
+    .popb.err i{ background-position:-98px -44px;}
+    .popb.err a, .popb.err a:hover{color:#4cb5ff;}
+    .u-qselect{
+        .popb.err{height:30px;}
+        .popb{
+            .b-i{height: 30px;width:21px;}
+        }
+        .popb.succ i{ margin-top: 7px; background-position:-388px -119px;}
+    }
+    .popb.warn{ color:$fc_warn;$animation(shake,1s);}
+    .popb.warn i{ background-position:-329px -119px;}
+    .popb.pwd{
+        i{ margin-top: 22px;padding:0; margin-right: 6px;width: 22px;height:11px; background-position:-186px -19px;}
+        p{display:none; float: left; margin: 20px 0 0 6px;}
+    }
+    .popb.pwd.lv1{color:$fc_lv_1;
+        .lv-i1{ background-position:-210px -19px;}
+        .lv-p1{display: block;}
+        span{padding-left:15px;color:#999}
+    }
+    .popb.pwd.lv2{color:$fc_lv_2;
+        .lv-i2{ background-position:-235px -19px;}
+        .lv-p2{display: block;}
+        span{padding-left:15px;color:#999}
+    }
+    .popb.pwd.lv3{color:$fc_lv_3;
+        .lv-i3{ background-position:-259px -19px;}
+        .lv-p3{display: block;}
+        span{padding-left:15px;color:#999}
+    }
+    .ps-lv{margin-left:323px;}
+    .ps-lv .popb{
+        height:45px;
+        p{font-size:14px;}
+    }
+    .b-btn{display:block; float:left; border:0; width:332px; height:42px;margin-top:8px; text-align:center; font-size:14px; color:#fff; line-height:42px;cursor: pointer;}
+    .btn-blue{background:$bc_blue;}
+    .btn-blue:hover{background: $bc_blue_hov;}
+    .btn-blue:active{background:$bc_blue_act;}
+    .btn-blue-diz{color:$fc_diz; cursor: default;}
+    .btn-blue-diz:hover{background:$bc_blue;}
+    .btn-blue-diz:active{background:$bc_blue;}
+    
+    .i-vcode{
+        float:left; height:40px; width:128px; margin:8px 0 0 10px;background:#eee; overflow: hidden;border: solid 1px $bd-item;
+        img{ width:100%; height:100%;text-align: center;line-height: 40px; color:$fc_gray;}
+    }
+    .i-vcode:hover{ cursor:pointer;}
+    .btn-getsms{float: left;  height: 40px; width:128px; font-size: 14px; line-height: 40px; margin:8px 0 0 10px; color:$fc_blue;background:#fff; text-align: center;border: solid 1px $bd-item; }
+    .btn-getsms:hover{color:#80caff;}
+    .btn-getsms-loading{float:left;height:40px;width:128px;font-size:14px; margin:8px 0 0 10px; line-height:40px;color:#b2b2b2;background:#fff;text-align:center;opacity:.99;border: solid 1px $bd-item;}
+
+    
+    .b-btn-diz, .b-btn-diz:hover{background:$fc_btn_diz;color:$fc1;cursor:default;}
+
+    /* 按钮Loading覆盖层 */
+    .b-loading{ position: relative;float: left; z-index: 4; top: 0; left: -332px; width:332px;height:42px;margin-top: 8px; background: $bc_blue; opacity: 0.7; filter:alpha(opacity=70);}
+    .b-loading img{ display: block; width: 30px; height: 30px; margin: 0 auto; margin-top: 7px; }
+}
+

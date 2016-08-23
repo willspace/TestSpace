@@ -1,0 +1,32 @@
+/**
+ * ------------------------------------------
+ * 设置实名信息：
+ * @for      html/realnameInfo
+ * @version  1.0
+ * @author   ZhangWei(wei.zhangwei@corp.netease.com)
+ * @time     2016.07.25
+ * ------------------------------------------
+ */
+
+/* 步骤1： 安全验证 */
+.realinfo-s1{
+    padding-bottom: 106px;
+}
+/* 步骤2： 设置实名信息 */
+.realinfo-s2{
+    padding-bottom: 90px;
+    .m-opr .m-succ{
+        padding-top: 7px;
+        padding-bottom: 47px ;
+        .note{
+            padding-top: 6px;
+            h3{
+                padding-bottom: 6px;
+                padding-top: 5px;
+            }
+        }
+        .u-bak{
+            padding-top: 37px;
+        }
+    }
+}

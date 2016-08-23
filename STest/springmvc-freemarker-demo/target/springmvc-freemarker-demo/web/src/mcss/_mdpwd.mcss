@@ -1,0 +1,10 @@
+.mdpwd-step1{
+    margin-top: 11px;
+    padding-bottom:94px;
+    .sub_tlt{margin-bottom: 25px;}
+}
+
+.mdpwd-step2{
+    margin-top:24px;
+    padding-bottom:81px;
+}

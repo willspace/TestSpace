@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Test01</title>
+</head>
+<style>
+	#canvas{
+		display: block;
+		border: solid 2px #ccc;
+		margin: 0 auto;
+	}
+</style>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		window.onload=function () {
+			var canvas = document.getElementById("canvas");
+
+			canvas.width = 1024;
+			canvas.height= 768;
+
+			var context = canvas.getContext("2d");
+
+			context.beginPath();
+			context.moveTo(100,100);
+			context.lineTo(700,700);
+			context.lineTo(100,700);
+			context.lineTo(100,100);
+			context.closePath();
+			context.lineWidth = 5;
+			context.strokeStyle = "#0ff";
+			context.stroke();
+
+			context.fillStyle = "#ccc";
+			context.fill();
+
+			context.beginPath();
+			context.moveTo(700,100);
+			context.lineTo(100,700);
+			context.closePath();
+			context.lineWidth = 5;
+			context.strokeStyle = "#FF0";
+			context.stroke();
+
+		}
+	</script>
+</body>
+</html>

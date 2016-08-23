@@ -1,0 +1,92 @@
+@abstract '_config.mcss';
+/* 注册状态(成功、失败、提醒) */
+.m-opr{
+    .m-succ, .m-error, .m-warn, .m-info, .m-people, .m-process{    
+        padding:26px 0 30px 324px;
+        $clearfix();
+        .i-img{
+            float:left;
+            $spritebg();width: 73px;height: 73px; 
+        }
+        .note{
+            float:left;
+            color:$fc_gray;
+            padding-top: 11px;
+            padding-left: 15px;
+            h3{font-size:18px;line-height:18px;color:$fc_h3;padding-bottom:6px;padding-top:5px;}
+            p{
+                line-height:20px;
+            }
+            strong{color:$fc_blue;}
+            .n-tip{margin-top:61px;}            
+        }          
+        .u-bak{
+            clear:both;
+            padding-left: 88px;
+            padding-top: 37px;
+        }
+        .b-btn-s{
+           float: left; margin-right: 32px;
+           width:109px;height:41px;
+           color:#b2b2b2;background:#fff; text-align: center;border: solid 1px $bd-item; 
+           line-height:41px;
+        }
+    }
+    .m-succ {
+        .i-img{background-position: -7px -160px;}        
+        .n-lock{
+            float:left;
+            color:$fc_gray;
+            padding-left: 15px;
+            .c-tlt{
+                display:inline-block;font-size:18px;line-height:18px;color:$fc_h3;padding-bottom:12px;padding-top:6px;padding-right:16px;}
+            a{display:inline-block;font-size:18px;color:$fc_blue;padding-left:18px;}
+            p{font-size:14px;}
+        }            
+      
+    }
+    .m-warn {
+        .i-img{background-position: -178px -160px;}
+        .note{
+            p{font-size:14px;}
+        }
+        .b-btn-w{
+            float:left;
+            width:96px;height:38px;
+            line-height:38px;
+            color:#b2b2b2;background:#fff;text-align:center;
+            border:1px solid $bd-item;
+            margin-right:40px;
+        }
+    }
+    .m-error {
+        .i-img{background-position: -93px -160px;}
+        .note{
+            .n-tip2{display:block;margin-top:30px;
+                p{font-size:16px;line-height:28px;}
+            }
+            p{font-size:14px;}
+        }
+        .u-bak{
+            padding-top:28px;
+        }
+    }
+    .m-info{
+        padding-bottom:0;
+        .i-img{background-position:-267px -160px;}
+        .note{
+            .n-tip2{display:block;margin-top:38px;
+                p{font-size:16px;line-height:28px;}
+            }
+        }
+        .u-bak{
+            padding-top:26px;
+        }
+    }
+    .m-people{
+        .i-img{background-position:-356px -160px;}
+    }
+    .m-process{
+        .i-img{background-position:-444px -160px;}
+    }
+}

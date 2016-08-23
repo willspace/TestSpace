@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star</title>
+</head>
+<style>
+	#canvas{
+		display: block;
+		border: solid 2px #ccc;
+		margin: 0 auto;
+	}
+</style>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		window.onload=function () {
+			var canvas = document.getElementById("canvas");
+
+			canvas.width = 1024;
+			canvas.height= 768;
+
+			var context = canvas.getContext("2d");
+			context.lineWidth = 10;
+			context.strokeStyle = "#ff0";
+			context.shadowBlur=20;
+			context.shadowColor="#f00";
+			context.lineJoin = "miter";
+			context.miterLimit = 20;
+			// context.beginPath();
+
+			// for(var i=0;i<5;i++){
+			// 	context.lineTo(Math.cos((18+i*72)/180*Math.PI)*200+300,
+			// 				   -Math.sin((18+i*72)/180*Math.PI)*200+400);
+			// 	context.lineTo(Math.cos((54+i*72)/180*Math.PI)*100+300,
+			// 				   -Math.sin((54+i*72)/180*Math.PI)*100+400);
+			// }
+			// context.closePath();
+			// context.stroke();
+			var m_a = 0;
+			var size2 = 100;
+			var size1 = -200;
+			var s_a = 3;
+			setInterval(function(){
+				context.clearRect(0,0,canvas.width,canvas.height);
+				m_a+=Math.PI/180;
+				if(size1<-300 || size1>=300){
+					s_a *=-1;
+				}
+				size1 += s_a;
+				drowStar(context,500,400,size2,size1,5,m_a);
+			},20);
+			
+
+		}
+		function drowStar(cxt,x,y,r1,r2,n,a=0){
+			cxt.beginPath();
+
+			for(var i=0;i<n;i++){
+				cxt.lineTo(Math.cos((0.5+(i-1)*2/n)*Math.PI-a)*r1+x,
+							   -Math.sin((0.5+(i-1)*2/n)*Math.PI-a)*r1+y);
+				cxt.lineTo(Math.cos((0.5+(2*i-1)/n)*Math.PI-a)*r2+x,
+							   -Math.sin((0.5+(2*i-1)/n)*Math.PI-a)*r2+y);
+			}
+			cxt.closePath();
+			cxt.stroke();
+		}
+	</script>
+</body>
+</html>

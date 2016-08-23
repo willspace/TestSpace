@@ -1,0 +1,113 @@
+/**
+ * ------------------------------------------
+ * 更换手机：
+ * @for      html/changePhone
+ * @version  1.0
+ * @author   ZhangWei(wei.zhangwei@corp.netease.com)
+ * @time     2016.07.11
+ * ------------------------------------------
+ */
+
+/* 离线步骤1：确认当前帐号页 */
+.changephone-offl-s1{
+
+}
+/* 离线步骤2：悬着更换方式页 */
+.changephone-offl-s2{
+    .sub_tlt{
+        margin:0;
+        padding-top: 6px;
+        color:$fc_black;
+    }
+    .b-channel{
+       padding:2px 0 3px;
+       .tlt{
+            display:none;
+       }
+       .i-channel{
+            .tlt{
+                display:block;
+                padding: 16px 0 7px 0;
+            }
+       }
+    }
+}
+/* 离线步骤3：更换成功页 */
+.changephone-offl-s3{
+    margin-bottom: 8px;
+    .m-succ{
+        padding-top:20px;
+        padding-bottom:0;
+        .note{
+            padding-top:9px;
+            h3{
+                padding-bottom: 8px;
+            }
+            p{
+                font-size:14px;
+            }
+        }
+        .b-btn{
+            margin-top:2px;
+            height:41px;
+            line-height:41px;
+            font-size: 15px;
+        }
+    }
+
+}
+/* 离线步骤4：更换手机 */
+.changephone-offl-s4{
+    #bind-phone-form{
+        padding-top: 21px;
+    }
+
+}
+/* 离线步骤：更换成功 */
+.changephone-offl-success{
+    .m-succ{
+        padding-top: 35px;
+        padding-bottom: 25px;
+        .note{
+            padding-bottom: 10px;
+        }
+        .u-bak{
+            padding-top: 6px;
+        }
+    }
+
+}
+/* 离线步骤：更换失败 */
+ .changephone-offl-error{
+     .m-error{
+         padding-top: 35px;
+         padding-bottom: 25px;
+         .note{
+             padding-bottom: 10px;
+         }
+         .u-bak{
+             padding-top: 6px;
+         }
+     }
+
+ }
+ /* 在线步骤1：验证原帐号 */
+ .changephone-onl-s1{
+    .sub_tlt_2{
+        font-size:15px;
+        padding-top:19px;
+    }
+    .b-channel{
+        padding-bottom:15px;
+    }
+ }
+ /* 在线步骤2：验证新帐号 */
+.changephone-onl-s2{
+  #bind-phone-form{
+        padding: 14px 0 24px 0;
+  }
+}
+ /* 在线步骤3：更换成功 */
+.changephone-onl-success{
+
+}
