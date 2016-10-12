@@ -1,3 +1,0 @@
-/* index */
-@import "_base.mcss";
-@import "_index.mcss";

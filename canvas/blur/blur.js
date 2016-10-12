@@ -24,7 +24,10 @@ _image.onload = function(e){
 		blurImg.css('left',(winWidth-blurImg.width())/2);
 		canvas.style.left = (winWidth-blurImg.width())/2+"px";
 	}
-	canvasWidth = blurImg.width()
+	_radius = (blurImg.height()<blurImg.width()?blurImg.height():blurImg.width())/15;
+	_clippingRegion.x=blurImg.width()/2;
+	_clippingRegion.y=blurImg.height()/2;
+	canvasWidth = blurImg.width();
 	canvasHeight = blurImg.height();
 	canvas.width = blurImg.width();
 	canvas.height = blurImg.height();
@@ -60,9 +63,9 @@ function show(){
 			_clickLock = false;
 			return;
 		}
-		_clippingRegion.r +=20;
+		_clippingRegion.r +=10;
 		draw(_image,_clippingRegion); 
-	},20);
+	},10);
 }
 
 function reset(){

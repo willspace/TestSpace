@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3实现曲线阴影和翘边阴影</title>
+	<style type="text/css">
+		*{margin:0;padding:0;font-size:20px; }
+		.box{width:600px;height:150px; margin: 50px auto; background: #fff;}
+		h1{text-align:center; line-height: 150px;}
+		.box-shadow1,.box-shadow2{position:relative;box-shadow: 0 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;}
+		.box-shadow1:after{content: "";position:absolute;background:transparent;top:50%;bottom: 1px;left: 10px;right: 10px;z-index: -1;
+					box-shadow: 0 0 20px rgba(0,0,0,0.7);border-radius: 100px/10px}
+		.box-shadow2:before,.box-shadow2:after{content: "";position:absolute;top:20px;bottom: 22px; background: transparent;box-shadow: 0 8px 20px rgba(0,0,0,0.7); z-index: -1;background: #fff;}
+		.box-shadow2:before{ left: 22px; right:12px;transform: skew(-12deg) rotate(-4deg);}
+		.box-shadow2:after{ left: 12px; right:22px;transform: skew(12deg) rotate(4deg);}	</style>
+</head>
+<body>
+	<div class="box box-shadow1">
+		<h1>曲线阴影</h1>
+	</div>
+
+	<div class="box box-shadow2">
+		<h1>翘边阴影</h1>
+	</div>
+</body>
+</html>

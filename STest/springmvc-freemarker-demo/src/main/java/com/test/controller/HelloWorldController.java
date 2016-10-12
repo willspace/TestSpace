@@ -11,7 +11,9 @@ public class HelloWorldController {
 
     @RequestMapping(value =  "/index.do" , method = RequestMethod.GET)
        public String indexPage(Model model) {
-        //model.addAttribute("name", "zhangsan");
-        return "web_index";
+        model.addAttribute("name", "zhangsan");
+        model.addAttribute("testName", "轻模版测试");
+        return "index";
     }
+
 }

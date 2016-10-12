@@ -1,3 +1,0 @@
-/* logincomp */
-@import "_base.mcss";
-@import "_logincomp.mcss";

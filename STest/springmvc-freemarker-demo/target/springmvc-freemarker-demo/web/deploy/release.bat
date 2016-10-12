@@ -1,2 +1,0 @@
-nej-build
-pause
