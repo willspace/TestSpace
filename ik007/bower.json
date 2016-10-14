@@ -1,0 +1,24 @@
+{
+  "name": "ik007",
+  "homepage": "https://github.com/zwwill/TestSpace",
+  "authors": [
+    "ZhangWei <wei.zhangwei@corp.netease.com>"
+  ],
+  "description": "ik007 movie",
+  "main": "",
+  "keywords": [
+    "ik007"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
