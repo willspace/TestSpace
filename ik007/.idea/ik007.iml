@@ -5,6 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="imooc node_modules" level="project" />
+    <orderEntry type="library" name="ik007 node_modules" level="project" />
   </component>
 </module>
