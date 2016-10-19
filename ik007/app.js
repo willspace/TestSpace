@@ -3,7 +3,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var morgan = require('morgan')
-
+var fs = require('fs');
 var port = process.env.PORT || 3000;
 var app = express();
 app.locals.moment = require('moment');
@@ -12,8 +12,29 @@ app.listen(port);
 /**
  * 数据库连接
  * */
-var dbUrl = 'mongodb://127.0.0.1:27017/data/db';
+var dbUrl = 'mongodb://127.0.0.1:27017/ik007';
 mongoose.connect(dbUrl);
+
+/**
+ *
+ * */
+var models_path = __dirname+'/app/models';
+var walk = function(){
+	fs
+		.readdirSync(path)
+		.forEach(function(file){
+			var newPath = path +'/'+file;
+			var stat = fs.statSync(newPath);
+			if(stat.isFile()){
+				if(/(.*)\.(js|coffee)/.test(file)){
+					require(newPath);
+				}
+			}else if(stat.isDirectory()){
+				walk(newPath);
+			}
+		})
+}
+
 
 /**
  * 模板引擎
@@ -32,6 +53,14 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,'public')));
 
 /**
+ * 文件上传引用模块
+ * */
+//app.use(express.multipart());
+var multipart = require('connect-multiparty');
+app.use(multipart());
+
+
+/**
  * cookie
  * */
 //app.use(express.cookieParser());
@@ -47,7 +76,7 @@ if('development' === app.get('env')){
 	app.set('showStackError',true);
 	app.use(morgan(':method :url :status'));
 	app.locals.pretty = true;
-	mongoose.set('debug',true);
+	//mongoose.set('debug',true);
 }
 
 /**
