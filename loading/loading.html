@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loading</title>
+</head>
+<body>
+	
+<style>
+    .load4{
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto;
+        background: #ddd;
+    }
+    .load4 .loader {
+        font-size: 1px;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        width:5px;
+        height:5px;
+        border-radius: 50%;
+        text-indent: -9999em;
+        -webkit-animation: load4 1s infinite linear;
+        animation: load4 1s infinite linear;
+    }
+    .loader:after {
+         content: '';
+         position: absolute;
+         top: 0;
+     }
+    @-webkit-keyframes load4 {
+        0%,
+        100% {
+            box-shadow: 0em -2em 0 0.2em #2C82FF, 1.414em -1.414em 0 0em #2C82FF,     2em 0em 0 0em #2C82FF,   1.414em 1.414em 0 0em #2C82FF,   0em 2em 0 0em #2C82FF,   -1.414em 1.414em 0 0em #2C82FF,  -2em 0em 0 0em #2C82FF,  -1.414em -1.414em 0 0em #2C82FF;
+        }
+        12.5% {
+            box-shadow: 0em -2em 0em 0em #2C82FF,   1.414em -1.414em 0 0.2em #2C82FF,   2em 0em 0 0em #2C82FF,      1.414em 1.414em 0 0em #2C82FF,   0em 2em 0 0em #2C82FF,   -1.414em 1.414em 0 0em #2C82FF,  -2em 0em 0 0em #2C82FF,  -1.414em -1.414em 0 0em #2C82FF;
+        }
+        25% {
+            box-shadow: 0em -2em 0em 0em #2C82FF, 1.414em -1.414em 0 0em #2C82FF,    2em 0em 0 0.2em #2C82FF,    1.414em 1.414em 0 0em #2C82FF,      0em 2em 0 0em #2C82FF,   -1.414em 1.414em 0 0em #2C82FF,  -2em 0em 0 0em #2C82FF,  -1.414em -1.414em 0 0em #2C82FF;
+        }
+        37.5% {
+            box-shadow: 0em -2em 0em 0em #2C82FF, 1.414em -1.414em 0 0em #2C82FF, 2em 0em 0 0em #2C82FF,      1.414em 1.414em 0 0.2em #2C82FF,    0em 2em 0 0em #2C82FF,      -1.414em 1.414em 0 0em #2C82FF,  -2em 0em 0 0em #2C82FF,  -1.414em -1.414em 0 0em #2C82FF;
+        }
+        50% {
+            box-shadow: 0em -2em 0em 0em #2C82FF, 1.414em -1.414em 0 0em #2C82FF, 2em 0em 0 0em #2C82FF,   1.414em 1.414em 0 0em #2C82FF,      0em 2em 0 0.2em #2C82FF,    -1.414em 1.414em 0 0em #2C82FF,     -2em 0em 0 0em #2C82FF,  -1.414em -1.414em 0 0em #2C82FF;
+        }
+        62.5% {
+            box-shadow: 0em -2em 0em 0em #2C82FF, 1.414em -1.414em 0 0em #2C82FF, 2em 0em 0 0em #2C82FF,   1.414em 1.414em 0 0em #2C82FF,   0em 2em 0 0em #2C82FF,      -1.414em 1.414em 0 0.2em #2C82FF,   -2em 0em 0 0em #2C82FF,     -1.414em -1.414em 0 0em #2C82FF;
+        }
+        75% {
+            box-shadow: 0em -2em 0em 0em #2C82FF, 1.414em -1.414em 0 0em #2C82FF, 2em 0em 0 0em #2C82FF,   1.414em 1.414em 0 0em #2C82FF,   0em 2em 0 0em #2C82FF,   -1.414em 1.414em 0 0em #2C82FF,     -2em 0em 0 0.2em #2C82FF,   -1.414em -1.414em 0 0em #2C82FF;
+        }
+        87.5% {
+            box-shadow: 0em -2em 0em 0em #2C82FF,   1.414em -1.414em 0 0em #2C82FF,  2em 0em 0 0em #2C82FF,   1.414em 1.414em 0 0em #2C82FF,   0em 2em 0 0em #2C82FF,   -1.414em 1.414em 0 0em #2C82FF,     -2em 0em 0 0em #2C82FF,     -1.414em -1.414em 0 0.2em #2C82FF;
+        }
+    }
+
+</style>
+<div class="load-container load4">
+    <div class="loader">Loading...</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>发现</title>
+
+  <!--宽度为设备的最大宽度，禁止用户放大和缩小-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--删除默认的苹果工具栏和菜单栏-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!--指定的iphone中浏览器顶端的状态条的样式为：黑色透明-->
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+  <!--告诉设备忽略将页面中的数字识别为电话号码-->
+  <meta content="telephone=no" name="format-detection">
+  <!--CSS文件-->
+  <style>
+html{font-size:14px;}
+body{background-color:#ebebed;}
+body.m-p{background:#fff;}
+*{font-family:"Microsoft YaHei","微软雅黑","宋体",helvetica,"Hiragino Sans GB";font-size:1rem; padding:0;margin:0;}
+.g-bd{position:relative;margin:0 auto;width:100%;max-width:40rem;}
+.m-banner{margin:0 auto;position:relative;overflow:hidden;height:9rem; padding-right: 40px;}
+.m-banner .hd{width:100%;height:10px;position:absolute;z-index:1;bottom:5px;text-align:center;}
+.m-banner .hd ul{display:inline-block;height:10px;}
+.m-banner .hd ul li{display:inline-block;width:5px;height:5px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;margin:0 6px;vertical-align:top;overflow:hidden;border:solid 1px #fff;text-indent:20px;}
+.m-banner .hd ul .on{background:#fff;}
+.m-banner .bd{width:100%;height:100%;position:relative;z-index:0;}
+.m-banner .bd .tempWrap{height:100%;overflow:visible !important;  }
+.m-banner .bd ul{height:100%;}
+.m-banner .bd ul li{display:block;height:100%;float:left;}
+.m-banner .bd ul li img{width:100%;height:100%;}
+.m-banner .bd ul li a{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+  </style>
+  <!-- @NOPARSE -->
+  <script src="./jquery-2.2.4.min.js"></script>
+  <script src="./TouchSlide.1.1.js"></script>
+  <!-- /@NOPARSE -->
+</head>
+
+<body>
+<div class="g-bd" id="g-bd">
+
+  <!-- touchslider -->
+  <div id="bannerBox" class="m-banner">
+      <div class="hd"><ul></ul></div>
+      <div class="bd">
+          <ul>
+            <li><a><img _src="./banner-1.png"></a></li>
+            <li><a href="http://xyq.163.com/"><img _src="./banner-2.png"></a></li>
+            <li><a href="http://yys.163.com/"><img _src="./banner-3.png"></a></li>
+          </ul>
+      </div>
+  </div>
+  <!-- END touchslider -->
+
+</div>
+</body>
+<script>
+
+//dom树构造完毕后运行
+$(document).ready(function(e) {
+	touchslider_reload();//大广告重新加载
+});
+
+
+function touchslider_reload() {
+	$(window).resize(function(){
+		var width=$("#g-bd").width()-40;
+		//广告区
+		$('.m-banner').css('height',3*width/7);
+	}).resize();
+
+	var dots = [];
+	TouchSlide({
+		slideCell:"#bannerBox",
+		titCell:".hd ul",
+		mainCell:".bd ul",
+		effect:"leftLoop",
+		autoPlay:false,//自动播放
+		autoPage:true, //自动分页
+		delayTime:500,
+		interTime:50000,
+		switchLoad:'_src',
+		startFun:function(i,c){
+			console.log(i+","+c);
+			if(dots.indexOf(i)!=-1)return;
+			dots.push(i);
+			var _item = $('.m-banner .bd li img')[i+1];
+			var _item_pre = $('.m-banner .bd li img')[i];
+			var _item_next = $('.m-banner .bd li img')[i+2];
+			if(i==0) {
+				$(_item_pre).attr('src', _item_pre.getAttribute('_src')||_item_pre.getAttribute('src'));
+				$(_item_next).attr('src', _item_next.getAttribute('_src')||_item_next.getAttribute('src'));
+			}else if(i==c-1) {
+				var _item_0 = $('.m-banner .bd li img')[1];
+				$(_item_next).attr('src', _item_0.getAttribute('_src')||_item_0.getAttribute('src'));
+
+				var _li_1 = $($('.m-banner .bd li')[2]).clone();
+				var _ul_con = $('.m-banner .bd ul');
+				_ul_con.css('width',_ul_con.width()+$(_li_1).width());
+				_ul_con.append($(_li_1));
+			}else{
+				$(_item_next).attr('src', _item_next.getAttribute('_src')||_item_next.getAttribute('src'));
+			}
+		}
+	});
+}
+</script>
+</html>
